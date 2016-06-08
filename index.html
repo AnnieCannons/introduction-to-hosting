@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>AnnieCannons Slides</title>
+
+    <meta name="description" content="AnnieCannons class slides">
+    <meta name="author" content="AnnieCannons">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/league.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+        <!--Introduction slide-->
+        <section>
+            <h2>Introduction to Web Hosting</h2>
+             <h4>How can I make my website accessible to other people?</h4>
+             <img src="IMG/hosting.jpg">
+        </section>
+        
+        <!--Slide 1-->
+
+       <section>
+           <h2>So... you made an awesome website in HTML/CSS/Javascript?</h2>
+           <img src="http://mashable.com/wp-content/uploads/2013/07/excited-baby.gif">
+            <br/>
+            <p class="fragment">But... now what?</p>
+           <aside class="notes"></aside>
+       </section> 
+       
+       <!--Slide 1-->
+
+        <section>
+            <h2>What we'll cover</h2>
+                <ul>
+                    <li class="fragment">Hosting: how a file on your computer becomes a public website 
+                    </li>
+                    <li class="fragment">Components of hosting and website architecture
+                    </li>
+                    <li class="fragment">Options and Tradeoffs of various hosting providers
+                    </li>
+                    <li class="fragment">A simple example using Dropbox
+                    </li>
+                </ul>
+            <aside class="notes"></aside>
+        </section> 
+
+         <!--Slide 1-->
+    
+        <section>
+            <h2>Your Local Development Environment</h2>
+                <ul>
+                    <li class="fragment">When you created an index.html file in your HTML class and loaded it up in your browser, your browser treated it like a real website</li>
+                    <li class="fragment">But it is really just a file on your computer</li>
+                    <li class="fragment">The browser's address bar will tell you if the file you are looking at is being loaded from your computer or from the World Wide Web</li>
+                    <li class="fragment"><img src="IMG/url1.png"></li>
+                    <li class="fragment"><img src="IMG/url2.png"></li>
+                </ul>
+            <aside class="notes"></aside>
+        </section> 
+
+        <!--Slide 1-->
+    
+        <section>
+            <h2>Your Local Development Environment</h2>
+                <ul>
+                    <li class="fragment"><strong>The goal of setting up hosting</strong> is to get that file that lives on your computer to a place where everyone can load it up in their browser</li>
+                    <li class="fragment"><img src="IMG/sharing-is-caring.jpg"</li>
+                </ul>
+            <aside class="notes"></aside>
+        </section> 
+
+         <!--Slide 1-->
+
+        <section>
+           <h2>Can that place be your computer?</h2>
+                <ul>
+                    <li class="fragment">By default, random people on the internet cannot access files on your computer</li>
+                    <li class="fragment">You can give them permission to access files on your computer though</li>
+                    <li class="fragment">Example: you can set up a webserver on your computer</li>
+                    <li class="fragment">Downside: but then your files will become inaccessible if your computer isn't on</li>
+                    <li class="fragment">Common solution: put your files on a server on some other computer that stays on all the time</li>
+                </ul>
+            <aside class="notes"></aside>
+        </section> 
+
+         <!--Slide 1-->
+        
+        <section>
+            <h2>Hosting</h2>
+            <ul>
+                <li class="fragment">Hosting basically just means: a place where you can put your files, made accessible via a server being run on a computer someplace else, managed by someone else</li>
+                <img src="IMG/server.jpg">
+            </ul>
+        </section>
+
+        <!--Slide 1-->
+
+        <section>
+            <h2>Hosting Examples</h2>
+            <ul>
+                <li class="fragment">Example: when you check your gmail, your browser is displaying the webpage that is your gmail inbox, after loading this webpage from a server somewhere else, managed by google</li>
+                <li class="fragment">Example: when you create a website on wordpress.com, your website files are running on a server somewhere else, managed by wordpress</li>
+
+            </ul>
+        </section>
+
+        <!--Slide 1-->
+
+        <section>
+            <h2>Big Picture</h2>
+            <img src="IMG/domain-vs-hosting.jpg">
+            <aside class="notes"></aside>
+        </section> 
+
+        <!--Slide 1-->
+
+        <section>
+            <h2>And now a little bit more about the world wide web</h2>
+            <img class="fragment" src="IMG/client-server.png" alt="" />
+        </section>
+
+        <!--Slide 1-->
+
+        <section>
+            <h3>Home and daily life of a web site</h3>
+            <p class="left-align">A typical web site will live or is "hosted" on a web server. Web servers are often large computers connected to a network.</p>
+        </section>
+
+        <!--Slide 1-->
+
+        <section>
+            <h3>The Story</h3>
+            <ul>
+                <li class="fragment">Type a web site address into the address bar</li>
+                <li class="fragment">DNS connects you to the hosting server</li>
+                <li class="fragment">The files are then sent back to your computer for display</li>
+                <li class="fragment">Sometimes code must be compiled before being sent back to you.</li>
+            </ul>
+            <aside class="notes"></aside>
+        </section> 
+
+        <!--Slide 1-->
+
+        <section>
+            <h3>Example: twitter</h3>
+            <div style="width: 100%; ">
+                <img src="IMG/browser request diagram.png" alt="" />
+            </div>
+        </section>
+
+         <!--Slide 1-->
+
+        <section>
+            <h3>Clients vs. Servers</h3>
+            <div class="left-align">
+                <p class="fragment">Clients make requests, servers fulfill them (usually).</p>
+                <p class="fragment">Requests are like questions: clients ask them, and servers answer them. </p>
+                <p class="fragment">For our web discussions, client = browser.</p>
+            </div>
+        </section>
+
+        <!--Slide 1-->
+
+        <section>
+            <h3>Clients vs. Servers</h3>
+            <ul>
+                <li class="fragment">While any type of computer can be used as a server, they are generally larger and more powerful than others.</li>
+                <li class="fragment">Client applications run on a client machine that you are interacting with (like your browser)</li>
+                <li class="fragment">Server applications run on a machine someplace else, that your client or client application can talk to</li>
+            </ul>
+        </section> 
+
+        <!--Slide 1-->
+
+        <section>
+            <h3>Hosting your client application</h3>
+            <ul>
+                <li class="fragment">Your index.html and style.css files are client code.</li>
+                <li class="fragment">After your web browser loads them up, they are run by your web browser to display your page.</li>
+                <li class="fragment">To make it so that anyone's browser can load them up, we will put them on a computer somewhere else (the host)</li>
+            </ul>
+        </section>
+
+        <!--Slide 1-->
+
+        <section>
+            <h3>Hosting your client application</h3>
+            <ul>
+                <li class="fragment">A server on that computer somewhere else will be the gatekeeper that lets anyone's browser load up your files (the client code)</li>
+                <li class="fragment">In this example, your code is the client code, and the server only acts as a gatekeeper</li>
+            </ul>
+            <aside class="notes"></aside>
+        </section> 
+        
+        <!--Slide 1-->
+
+        <section>
+            <h2>So, which hosting provider should I use</h2>
+        </section>
+
+        <!--Slide 1-->
+
+        <section>
+            <h3>Types of Hosting Providers</h3>
+            <ul>
+                <li class="fragment">File stores: a place to put files; Example: S3, Github Pages, Dropbox</li>
+                <li class="fragment">Package Providers: a place where you can get a domain name, optional preinstalled software; Example: wordpress.org, bluehost.com
+                </li>
+                <li class="fragment">Roll your own: a place where you can set up and manage all the website components on your own, including databases, servers, domain names, etc. Example: EC2, Heroku, Linode, Digital Ocean</li>
+            </ul>
+        </section>
+
+         <!--Slide 1-->
+
+        <section>
+            <h3>When to use them?</h3>
+            <ul>
+                <li class="fragment">File stores: when you just need to make static files available</li>
+                <li class="fragment">Packages: when you need a cheap way to roll out a whole website (for a small business for example), and need everything to "just work" but dont need customization
+                </li>
+                <li class="fragment">Roll your own: when your software or business dictates you need full control; for example, most tech companies build their own website architectures and hosting solutions</li>
+            </ul>
+        </section>
+
+        <!--Slide 1-->
+
+        <section>
+            <h3>Tradeoffs</h3>
+            <ul>
+                <li class="fragment">File stores: good for static pages or client applications, insufficient for server applications</li>
+                <li class="fragment">Packages: good for people who want to create and manage content, frustrating for techies who want more control or want to use software components not on the "allowed" list
+                </li>
+                <li class="fragment">Roll your own: more time consuming, need to be a techie to implement and maintain, but full control, ability to deploy/host any kind of client or server application, often cheaper</li>
+            </ul>
+        </section>
+
+        <!--Slide 1-->
+
+        <section>
+            <h2>Let's deploy your website!</h2>
+            <ul>
+                <li class="fragment">We will use an example that doesn't store or retrieve data. It involves only client code and no server code. </li>
+                <li class="fragment">Which type of hosting provider best fits our use case? </li>
+                <li class="fragment">File store</li>
+                <li class="fragment">(Technically you could use any hosting solution, this will just be faster, if we are ok with the associated tradeoffs)</li>
+            </ul>
+        </section>
+
+        <!--Slide 1-->
+
+        <section>
+            <h2>Dropbox</h2>
+            <ul>
+                <li class="fragment">Goal: we will put your index.html and style.css file in a location that is accessible to the public</li>
+                <li class="fragment">Step 1: log in to your dropbox.com account</li>
+                <li class="fragment">Step 2: click on the "Public" folder</li>
+                <li class="fragment">Step 3: click "upload" and select your index.html file, upload it, and then do the same for the style.css file</li>
+                <li class="fragment">Step 4: Back in the file viewer, select (but do not open) index.html, then click "Copy public link"</li>
+                <li class="fragment">Step 5: Copy and paste that link into a browser.</li>
+                <li class="fragment">There's your website! Anyone can view it now!</li>
+            </ul>
+        </section>
+
+        <!--Slide 1-->
+
+        <section>
+            <h2>Summary</h2>
+            <ul>
+                <li class="fragment">So that was pretty easy. What's next?</li>
+                <li class="fragment">Deploying changes: every time you make changes to your local file, and want to see these changes reflected in the public site, you need to reload these files</li>
+                <li class="fragment">But the link is ugly, how can I fix this?</li>
+                <li class="fragment">Tradeoffs again: you cant control the hostname of a Dropbox hosted file. ** </li>
+                <li class="fragment">Goal of this exercise: identify the needs for your website, and then choose the hosting provider that best fits your needs</li>
+            </ul>
+        </section>      
+
+        <section>
+            <h2>
+                For more information!
+            </h2>
+            <p>
+               <a href="http://www.webhostingsecretrevealed.net/web-hosting-beginner-guide/">Click here</a>
+            </p>
+            <aside class="notes"></aside>
+        </section> 
+        
+
+<!-- RETURN TO OUR SLIDES -->
+        <section style="text-align: left;">
+            <h1>THE END</h1>
+            <p>Thank you for your attention!</p>
+        </section>
+
+    </div>
+
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+            {
+                src: 'lib/js/classList.js', condition: function () {
+                return !document.body.classList;
+            }
+            },
+            {
+                src: 'plugin/markdown/marked.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            }
+            },
+            {
+                src: 'plugin/markdown/markdown.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            }
+            },
+            {
+                src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+            }
+            },
+            {src: 'plugin/zoom-js/zoom.js', async: true},
+            {src: 'plugin/notes/notes.js', async: true}
+        ]
+    });
+
+</script>
+
+</body>
+</html>
